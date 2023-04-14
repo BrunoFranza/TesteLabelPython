@@ -1,0 +1,28 @@
+from tkinter import *
+from tkinter import ttk
+
+app = Tk()
+app.title("Acesso")
+app.geometry("300x150")
+
+lb_usuario = Label(app, text="Digite o usuario")
+lb_senha = Label(app, text="Digite senha")
+lb_ipp = Label(app, text="Endereço IP:")
+
+et_usuario = Entry(app)
+et_senha = Entry(app)
+et_ipp = Entry(app)
+
+btn = Button(app, text="Acessar")
+
+lb_usuario.grid(column=0, row=0) #comando (columnspan=2) mescla celulas
+et_usuario.grid(column=0, row=1)
+
+lb_senha.grid(column=0, row=3)
+et_senha.grid(column=0, row=4)
+
+lb_ipp.grid(column="0", rows="5")
+et_ipp.grid(column="0", rows="6")
+
+
+app.mainloop()
